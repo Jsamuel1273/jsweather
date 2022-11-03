@@ -9,8 +9,6 @@ const weatherRoute = require("./routes/get");
 const postRoute = require("./routes/post_current_weather")
 const forecastRoute = require("./routes/get_forecast")
 const postforecast = require("./routes/post_forecast")
-// requring request for making request to api
-const request = require("request")
 // requiring dotenv to store api key
 require('dotenv').config();
 const bodyParser = require('body-parser');
