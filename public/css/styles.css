@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#main-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+
+}
+#my-vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ration: 16/9){
+    #my-vid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ration: 16/9){
+    #my-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.container{
+    text-align: center;
+    
+}
+.intro{
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+    color: white;
+}
+.flex{
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    height: 40vh;
+}
+#main-temp{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: lightgoldenrodyellow;
+}
+.side-temp{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    color: lightgoldenrodyellow;
+    font-size: 2rem;
+    padding-top: 5rem;
+}
+
+span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem; 
+}
+
+.description{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: lightgoldenrodyellow;
+    padding-top: 5rem;
+}
+.second-grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    height: 40vh;
+}
+img{
+    width: 45%;
+    margin-left: 5rem;
+    margin-top: 3rem;
+
+   
+}
+.sub-d{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+}
+
+@media only screen and (max-width: 850px){
+    .flex{
+        display: flex;
+    }
+  .second-grid{
+    display: flex;
+  }
+  #main-container{
+    padding-top: 5rem;
+  }
+  #main-temp{
+    margin-top: 7rem;
+  }
+  .description{
+      font-size: 2rem;
+  }
+  img{
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 750px){
+    .flex{
+        display: block;
+        height: 30vh;
+    }
+  .second-grid{
+    display: block;
+    height: 20vh;
+    
+  }
+  #main-container{
+   padding-top: 5rem;
+   
+  }
+  .side-temp{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 0rem;
+}
+
+span{
+    font-size: 1rem; 
+}
+#main-temp{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+.sub-d{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.description{
+    font-size: 1.5rem;
+    margin-top: 0;
+    
+}
+img{
+    width: 45%;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 0rem;
+    
+
+   
+}
+.intro{
+    font-size: 1rem;
+    color: white;
+}
+}
+
+@media only screen and (max-width: 380px){
+    
+    .flex{
+        height: 20vh;
+    }
+  .second-grid{
+    height: 10vh;
+    
+  }
+  #main-container{
+    padding-top: 1.5em;
+    
+   }
+}
+@media only screen and (max-width: 290px){
+    .side-temp{
+        font-size: 1rem;
+
+    }
+
+    .description{
+        font-size: 1.2rem;
+    }
+  
+}

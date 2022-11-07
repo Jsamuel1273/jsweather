@@ -36,8 +36,10 @@ currentWeatherRoute.get("/", (req, res)=>{
                     const icon = response.body.weather[0].icon;
                     const city = response.body.name
                     const country = response.body.sys.country
-                    const description = response.body.weather[0].description
-                    res.render("home", {city : city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon})
+                    const description = response.body.weather[0].description;
+                    const feels = response.body.main.feels_like;
+                    const humidity = response.body.main.humidity;
+                    res.render("home", {city : city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon, feels: feels, humidity: humidity})
             }
         })
 })
