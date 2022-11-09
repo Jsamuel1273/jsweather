@@ -1,11 +1,11 @@
 <%- include("./partials/header")%>
 <div id="main-container"class="user-select-none">
    <video playsinline autoplay muted loop id="my-vid">
-      <source src="../videos/Clouds - 17723.mp4" type="video/mp4">
+      <source src="<%=vid%>" type="video/mp4">
       </video>
 <div class="container">
 <P class="intro shadow-lg border-light rounded">Current Weather conditon for <%=city%>, <%=country%></P>
-<div class="flex shadow-lg rounded">
+<div class="flex ">
    <p class="side-temp shadow-sm rounded">maximum temperature <span><%=maxTemperature%>&deg;C</span></p>
    <div>
       <p id="main-temp" class="shadow-lg rounded"><%=temperature%>&deg;C</p>
@@ -21,3 +21,6 @@
 </div>
 </div>
    <%- include("./partials/footer")%>
+
+
+   

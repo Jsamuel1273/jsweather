@@ -15,6 +15,7 @@ require('dotenv').config();
 // using api key from dotenv file
 // using api key from dotenv file
 const api = process.env.API_KEY;
+const vide = require('../video')
 
 currentWeatherRoute = new express.Router()
 // url with default query of longitued and latiitued for melbourne
@@ -30,6 +31,7 @@ currentWeatherRoute.get("/", (req, res)=>{
                     }else if(response.statusCode == 401){
                         res.render("errors", {error: "There was an error connecting to api"})
                     }
+                    const vid = vide[Math.floor(Math.random() * vide.length)]
                     const temperature = response.body.main.temp;
                     const maxTemperature = response.body.main.temp_max;
                     const minTemperature = response.body.main.temp_min;
@@ -39,7 +41,7 @@ currentWeatherRoute.get("/", (req, res)=>{
                     const description = response.body.weather[0].description;
                     const feels = response.body.main.feels_like;
                     const humidity = response.body.main.humidity;
-                    res.render("home", {city : city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon, feels: feels, humidity: humidity})
+                    res.render("home", {city : city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon, feels: feels, humidity: humidity, vid: vid})
             }
         })
 })

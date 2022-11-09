@@ -19,7 +19,7 @@ require('dotenv').config();
 // using api key from dotenv file
 // using api key from dotenv file
 const api = process.env.API_KEY;
-
+const vide = require("../video")
 const postRoute = new express.Router()
 postRoute.post("/", (req, res) => {
     const query = req.body.city;
@@ -44,6 +44,7 @@ postRoute.post("/", (req, res) => {
             } else if (response.statusCode == 401) {
                 res.render("errors", { error: "There was an error connecting to api" })
             }
+            const vid = vide[Math.floor(Math.random() * vide.length)]
             const temperature = response.body.main.temp;
             const maxTemperature = response.body.main.temp_max;
             const minTemperature = response.body.main.temp_min;
@@ -53,7 +54,7 @@ postRoute.post("/", (req, res) => {
             const country = response.body.sys.country
             const description = response.body.weather[0].description
             const humidity = response.body.main.humidity;
-            res.render("home", { city: city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon, feels: feels, humidity: humidity})
+            res.render("home", { city: city, country: country, temperature: temperature, maxTemperature: maxTemperature, minTemperature: minTemperature, description: description, icon: icon, feels: feels, humidity: humidity, vid: vid})
         }
     })
 })

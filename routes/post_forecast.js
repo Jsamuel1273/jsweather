@@ -18,6 +18,7 @@ require('dotenv').config();
 // using api key from dotenv file
 const api = process.env.API_KEY;
 
+
 const postForecastRoute = new express.Router();
 
 postForecastRoute.post("/forecast", (req, res)=>{

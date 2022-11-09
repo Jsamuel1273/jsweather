@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('dotenv').config();
 // using api key from dotenv file
 const api = process.env.API_KEY;
-
 const getForecastRoute = new express.Router()
 
 getForecastRoute.get("/forecast", (req, res)=>{
@@ -33,7 +32,7 @@ getForecastRoute.get("/forecast", (req, res)=>{
             }
                 const temperature = response.body.list
                 const info = response.body
-                res.render("forecast", {temperature: temperature, info: info,})
+                res.render("forecast", {temperature: temperature, info: info})
         }
     })
 })
