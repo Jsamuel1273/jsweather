@@ -13,7 +13,7 @@ const postforecast = require("./routes/post_forecast")
 require('dotenv').config();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static('public'))
 // using express app to use the weather route for post request
 app.use(weatherRoute)
 app.use(postRoute);
